@@ -7,6 +7,6 @@ The goal of this project is to create a basic recipe website using all of the HT
 This project will test my knowledge, understanding, and application of the following skills:
 
 - layout and organization
-- basic text styling
-- proper implementation of images and links
+- basic text styling and markup
+- implementation of images and links
 - proper file structure
