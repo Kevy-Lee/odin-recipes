@@ -8,3 +8,4 @@ This project will test my knowledge, understanding, and application of the follo
 - basic text styling and markup
 - implementation of images and links
 - proper file structure
+- usage of git commit and commit message convention
