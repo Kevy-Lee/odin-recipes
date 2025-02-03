@@ -1,0 +1,176 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  /* outline: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  background-color: #fedacd;
+  color: #121313;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.1;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
+
+.site-container {
+  width: 100%;
+  margin: 2em 0em;
+  border-radius: 1em;
+  background-color: #fff4e8;
+}
+
+
+/* Styling for header content */
+
+.site-header {
+  align-items: center;
+  color: #4d5050;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top-navigation-wrapper,
+.main-content-wrapper {
+  content: "";
+  clear: both;
+  display: table;
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+}
+
+.top-navigation-logo,
+.top-navigation-main {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.top-navigation-logo {
+  margin: auto;
+  padding: 0.5em;
+}
+
+.top-navigation-logo img {
+  height: auto;
+  width: 200px;
+}
+
+.top-navigation-main {
+  margin: 0 auto;
+  padding: 0em;
+  float: right;
+}
+
+.main-menu,
+.sign-in {
+  display: inline-block;
+  padding: 0em;
+}
+
+.main-menu {
+  margin-right: 5em;
+  margin-left: 0em;
+}
+
+@media screen and (max-width: 1440px) {
+  .main-menu {
+    margin-right: 4em;
+    margin-left: 0em;
+  }  
+}
+
+.main-menu div,
+.sign-in div {
+  display: inline-block;
+  margin-left: 1em;
+  /* padding: 0.5em; */
+}
+
+.main-menu p,
+.sign-in p {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+
+/* styling for main site content */
+/* post-header content */
+
+.post-header {
+  font-size: 18px;
+  content: "";
+  clear: both;
+  display: table;
+  margin: 1rem 0rem;
+}
+
+.post-header .text-wrapper,
+.post-header .image-wrapper {
+  display: inline-block;
+  max-width: 50%;
+  min-width: 30%;
+  /* must specify width of wrappers for them to fit side-by-side using inline-block*/
+  padding: 10px;
+  vertical-align: top;
+}
+
+.post-header .text-wrapper {
+  width: 45%;
+}
+
+.post-header .text-wrapper h1 {
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.post-header .image-wrapper {
+  float: right;
+}
+
+.image-wrapper img {
+  border-radius: 120px;
+  height: auto;
+  width: 400px;
+}
+
+.button-container button {
+  margin-right: 0.5em;
+  border: none;
+  border-radius: 20px;
+  padding: 1em 1.5em;
+  /* font-size: 14px; */
+  font-weight: 600;
+}
+
+.button-container .green-button {
+  background-color: #f87067;
+  color: #f0f0f0;
+}
+
+.button-container .muted-button {
+  background-color: #fad4c9;
+  color: #f87067;
+}
+
+/* 1st section */
+
+.module {
+  margin: 4rem 0rem;
+}
+
+.module h2 {
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+* {
+  outline: 1px solid red;
+  padding: 0px;
+}
+
+body {margin: 0px}
+
+.flex-container {
+  display: flex;
+  gap: 8px;
+  height: auto;
+  width: 500px;
+  margin: 10px auto;
+  padding: 30px;
+  background: beige;
+}
+
+.item {
+  flex: 1 1 auto;
+  height: 20px;
+  width: 100px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.one {background-color: lightcoral;}
+.two {background-color: lightsalmon;}
+.three {background-color: yellow;}
+.four {background-color: lightgreen;}
