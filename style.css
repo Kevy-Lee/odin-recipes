@@ -33,7 +33,7 @@ h2, h3 {
 }
 
 
-/* Styling for header content */
+/* || Header and Main Navigation */
 
 .site-header {
   align-items: center;
@@ -42,111 +42,122 @@ h2, h3 {
   font-weight: 600;
 }
 
-.top-navigation-wrapper,
+.top-nav-content,
 .main-content-wrapper {
-  content: "";
-  clear: both;
-  display: table;
-  width: 60%;
+  width: 55%;
   margin: auto;
-  padding: 1em;
+  padding: 10px;
 }
 
-.top-navigation-logo,
-.top-navigation-main {
-  display: inline-block;
-  vertical-align: bottom;
+@media (max-width: 1024px) {
+  .top-nav-content,
+  .main-content-wrapper {
+    width: 80%;
+  }
 }
 
-.top-navigation-logo {
-  margin: auto;
+@media (max-width: 768px) {
+  .top-nav-content,
+  .main-content-wrapper {
+    width: 90%;
+  }
+}
+
+.top-nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em;
+}
+
+.top-nav-content .items {
+  list-style: none;
+}
+
+.items li {
+  min-width: max-content;
+}
+
+.top-nav-logo {
+  margin-left: 0;
   padding: 0.5em;
 }
 
-.top-navigation-logo img {
+.top-nav-logo img {
   height: auto;
   width: 200px;
 }
 
-.top-navigation-main {
-  margin: 0 auto;
-  padding: 0em;
-  float: right;
+.top-nav-login {
+  margin-right: 0;
 }
 
-.main-menu,
-.sign-in {
-  display: inline-block;
-  padding: 0em;
+.top-nav-menu .items,
+.top-nav-login .items {
+  display: flex;
+  gap: 2em;
+  padding: 0;
+  /* need to add wrapping and/or condensed menu for narrow resolutions */
 }
 
-.main-menu {
-  margin-right: 5em;
-  margin-left: 0em;
-}
-
-@media screen and (max-width: 1440px) {
-  .main-menu {
-    margin-right: 4em;
-    margin-left: 0em;
-  }  
-}
-
-.main-menu div,
-.sign-in div {
-  display: inline-block;
-  margin-left: 1em;
-  /* padding: 0.5em; */
-}
-
-.main-menu p,
-.sign-in p {
-  padding: 1em;
-  margin: 0 auto;
-}
-
-
-/* styling for main site content */
-/* post-header content */
+/* || Post-Header Content */
 
 .post-header {
-  font-size: 18px;
-  content: "";
-  clear: both;
-  display: table;
+  display: flex;
+  justify-content: space-between;
+  gap: 4em;
   margin: 1rem 0rem;
+  font-size: 18px;
 }
 
-.post-header .text-wrapper,
+.text-container,
+.image-wrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1680px) {
+  .post-header {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.post-header .text-container {
+  flex-flow: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.post-header .text-container > * {
+  margin: 0;
+  align-content: center;
+}
+
+.post-header .text-container h1 {
+  font-size: 50px;
+}
+
+.post-header .button-container {
+  margin: 1em 0;
+} 
+
 .post-header .image-wrapper {
-  display: inline-block;
-  max-width: 50%;
-  min-width: 30%;
-  /* must specify width of wrappers for them to fit side-by-side using inline-block*/
-  padding: 10px;
-  vertical-align: top;
-}
-
-.post-header .text-wrapper {
-  width: 45%;
-}
-
-.post-header .text-wrapper h1 {
-  font-size: 40px;
-  margin-bottom: 1rem;
-}
-
-.post-header .image-wrapper {
-  float: right;
+  align-items: center;
 }
 
 .image-wrapper img {
-  border-radius: 120px;
+  flex: auto;
   height: auto;
-  width: 400px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 35% 20%;
 }
 
 .button-container button {
+  min-width: max-content;
   margin-right: 0.5em;
   border: none;
   border-radius: 20px;
@@ -165,7 +176,7 @@ h2, h3 {
   color: #f87067;
 }
 
-/* 1st section */
+/* || Recipes Section */
 
 .module {
   margin: 4rem 0rem;
@@ -173,4 +184,62 @@ h2, h3 {
 
 .module h2 {
   text-align: center;
+}
+
+.card-container {
+  display: flex;
+  /* flex-flow: row wrap; */
+  gap: 1em;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 1.5em;
+  background-color: #ffffff;
+}
+
+.card > * {
+  padding: 0em 1.5em;
+}
+
+.card .image-container {
+  flex: auto;
+  margin-top: 1em;
+  align-content: center;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+.card .image-container img {
+  height: auto;
+  width: 80px;
+}
+
+.card h3 {
+  flex: 0;
+  margin: 1em 0em;
+  color: #0d8553;
+  font-size: 18px;
+  font-weight: 700;
+  /* min-width: max-content; */
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline #0d8553;
+  text-underline-offset: 3px;
+}
+
+.card p {
+  margin-bottom: 1.5em;
+  color: #353535;
+  font-size: 14px;
+  line-height: 1.6;
 }
